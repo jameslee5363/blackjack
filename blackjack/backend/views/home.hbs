@@ -1,0 +1,14 @@
+<section class="home text-center">
+  <h1 class="text-2xl font-bold mb-4">Welcome to Blackjack {{user}}</h1>
+
+  {{#if loggedIn}}
+    <h3>Your Current Balance: ${{balance}}</h3>
+    <a href="/game" class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md transition duration-200">
+      Play
+    </a>
+    <form action="/deposit" method="POST">
+      <input type="number" name="amount" placeholder="Enter deposit amount" required min="1">
+      <button type="submit">Deposit</button>
+    </form>
+  {{/if}}
+</section>

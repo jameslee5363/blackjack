@@ -1,0 +1,21 @@
+<section class="auth-container">
+  <h1>Login to Blackjack</h1>
+
+  {{#if message}}
+    <div class="error-message">
+      {{message}}
+    </div>
+  {{/if}}
+
+  <form action="/login" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+
+    <button type="submit">Login</button>
+  </form>
+
+  <p>Don't have an account? <a href="/register">Register here</a>.</p>
+</section>
